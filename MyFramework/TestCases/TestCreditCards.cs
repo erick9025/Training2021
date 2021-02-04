@@ -37,7 +37,7 @@ namespace ErickRun
             AxosCreditCard card3 = new AxosCreditCard("Karen González", "4792012304560010", 999999, CardNetworks.Visa);
             Console.WriteLine("How many cards created so far: " + AxosCreditCard.cardCounter);
 
-            card3.BuySomething(1, "MSFT134", "Microsoft Verification");
+            card3.BuySomething(1.99, "MSFT134", "Microsoft Verification");
             card3.PrintCardDetails();
         }
     }

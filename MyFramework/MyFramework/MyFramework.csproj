@@ -58,6 +58,7 @@
     <Compile Include="Exercise2\CreditCard.cs" />
     <Compile Include="Exercise2\DebitCard.cs" />
     <Compile Include="Exercise2\ICard.cs" />
+    <Compile Include="Palindrome\SampleMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

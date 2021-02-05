@@ -1,6 +1,7 @@
 ﻿using Inheritance.Exercise2;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using MyFramework.SampleMethods;
 
 namespace ErickRun
 {
@@ -39,6 +40,12 @@ namespace ErickRun
 
             card3.BuySomething(1.99, "MSFT134", "Microsoft Verification");
             card3.PrintCardDetails();
+        }
+
+        [TestMethod, TestCategory("Fibonacci")]
+        public void Exercise_Fibonacci()
+        {
+            Console.WriteLine(SampleMethods.Fibonacci(10));
         }
     }
 }

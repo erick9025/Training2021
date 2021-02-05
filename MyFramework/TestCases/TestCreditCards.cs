@@ -8,7 +8,7 @@ namespace ErickRun
     public class TestCreditCards
     {
         /// <summary>
-        /// Author: Erick Jiménez
+        /// Author: Karen Gonzalez
         /// </summary>
 
         [TestMethod, TestCategory("Financial")]

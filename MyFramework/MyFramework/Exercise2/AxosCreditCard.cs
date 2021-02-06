@@ -1,5 +1,6 @@
 ﻿using System;
 using NUnit.Framework; //Mac Exclusive
+using MyFramework.Exercise3_Karen;
 //MSTest -- microsoft windows
 //XUnit -- multiplatform
 
@@ -40,15 +41,15 @@ namespace Inheritance.Exercise2
 
         public override void Withdraw(double amountWithdrawn)
         {
-            Console.WriteLine($"New Withdraw :: {GetCardMask()}:");
-            Console.WriteLine($"   <--$-- ▅   {amountWithdrawn.ToString("C")}{Environment.NewLine}");//https://fsymbols.com/signs/square/
+            Printer.Print($"New Withdraw :: {GetCardMask()}:");
+            Printer.Print($"   <--$-- ▅   {amountWithdrawn.ToString("C")}{Environment.NewLine}");//https://fsymbols.com/signs/square/
             base.Withdraw(amountWithdrawn);
         }
 
         public override void Deposit(double amountDeposited)
         {
-            Console.WriteLine($"New Deposit :: {GetCardMask()}:");
-            Console.WriteLine($"   --$--> ▅   {amountDeposited.ToString("C")}{Environment.NewLine}");
+            Printer.Print($"New Deposit :: {GetCardMask()}:");
+            Printer.Print($"   --$--> ▅   {amountDeposited.ToString("C")}{Environment.NewLine}");
             base.Deposit(amountDeposited);
         }
 
@@ -65,10 +66,10 @@ namespace Inheritance.Exercise2
             Assert.IsFalse(string.IsNullOrEmpty(concept) && concept.Length >= 7, "Concept can NOT be null/empty and must have at least 7 chars");
 
             base.Withdraw(transactionAmount);
-            Console.WriteLine($"New purchase @ {GetCardMask()}:");
-            Console.WriteLine($"      {authNumber}");
-            Console.WriteLine($"      {concept}");
-            Console.WriteLine($"      {transactionAmount.ToString("C")}{Environment.NewLine}");
+            Printer.Print($"New purchase @ {GetCardMask()}:");
+            Printer.Print($"      {authNumber}");
+            Printer.Print($"      {concept}");
+            Printer.Print($"      {transactionAmount.ToString("C")}{Environment.NewLine}");
         }
 
         public void PrintBalance()
@@ -76,29 +77,29 @@ namespace Inheritance.Exercise2
             DateTime dNow = DateTime.Now;
             string dateFormat = dNow.ToString("yyyy MMM dd @ HH:mm:ss");
 
-            Console.WriteLine($"<<{GetCardMask()}>>");
+            Printer.Print($"<<{GetCardMask()}>>");
             //ToString("C") gives currency format 1325.17 --> $1,1325.17
-            Console.WriteLine($"Your current balance as of {dateFormat} is: ${this.balance.ToString("N")}"); //Way parameterized
-            Console.WriteLine(string.Empty);
+            Printer.Print($"Your current balance as of {dateFormat} is: ${this.balance.ToString("N")}"); //Way parameterized
+            Printer.Print(string.Empty);
 
             return; //Code after return won't be executed
-            Console.WriteLine("Your current balance as of " + dateFormat + " is: $" +this.balance.ToString("N")); //Part by part
+            Printer.Print("Your current balance as of " + dateFormat + " is: $" +this.balance.ToString("N")); //Part by part
             //This won't be executed
             //This won't be executed neither
         }
 
         public override void PrintCardDetails()
         {
-            Console.WriteLine($"----------------------------------- {GetCardMask()} -----------------------------------");
-            Console.WriteLine("     - Card Holder: " + this.cardHolder);
-            Console.WriteLine("     - Card Number: " + this.cardNumber);
-            Console.WriteLine("     - Status: " + this.cardStatus);
-            Console.WriteLine("     - Balance: $" + this.balance.ToString("N"));
-            Console.WriteLine("     - Available Credit: $" + this.availableCredit.ToString("N"));
-            Console.WriteLine("     - Line of Credit: $" + this.lineOfCredit.ToString("N"));
-            Console.WriteLine("     - Card Network: " + this.cardNetwork);
-            Console.WriteLine("     - Has Additionals: " + this.hasAdditionals.ToString().ToUpper());
-            Console.WriteLine($"------------------------------------------------------------------------------------------");
+            Printer.Print($"----------------------------------- {GetCardMask()} -----------------------------------");
+            Printer.Print("     - Card Holder: " + this.cardHolder);
+            Printer.Print("     - Card Number: " + this.cardNumber);
+            Printer.Print("     - Status: " + this.cardStatus);
+            Printer.Print("     - Balance: $" + this.balance.ToString("N"));
+            Printer.Print("     - Available Credit: $" + this.availableCredit.ToString("N"));
+            Printer.Print("     - Line of Credit: $" + this.lineOfCredit.ToString("N"));
+            Printer.Print("     - Card Network: " + this.cardNetwork);
+            Printer.Print("     - Has Additionals: " + this.hasAdditionals.ToString().ToUpper());
+            Printer.Print($"------------------------------------------------------------------------------------------");
         }
 
         private string GetCardMask()

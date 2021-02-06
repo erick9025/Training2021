@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MyFramework.Exercise3_Karen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +29,7 @@ namespace ErickRun
                 }
             }
 
-            System.Console.WriteLine("UNO " + num);
+            Printer.Print("UNO " + num);
         }
 
         [TestMethod]
@@ -51,7 +52,7 @@ namespace ErickRun
                 }
             }
 
-            System.Console.WriteLine("DOS " + num);
+            Printer.Print("DOS " + num);
         }
 
         [TestMethod]
@@ -74,7 +75,7 @@ namespace ErickRun
                 }
             }
 
-            System.Console.WriteLine("TRES " + num);
+            Printer.Print("TRES " + num);
         }
 
         [TestMethod]
@@ -84,7 +85,7 @@ namespace ErickRun
             string dayOfWeek = string.Empty;
             string year = "";
 
-            Console.WriteLine("hacer un programa que imprima todos los sabados y domingos que aun no suceden del 2021");
+            Printer.Print("hacer un programa que imprima todos los sabados y domingos que aun no suceden del 2021");
 
             for (int x = 0; x <= 365; x++)
             {
@@ -96,7 +97,7 @@ namespace ErickRun
                 {
                     if (year == "2021")
                     {
-                        Console.WriteLine(myDate.ToString("yyyy MMMM dd dddd"));
+                        Printer.Print(myDate.ToString("yyyy MMMM dd dddd"));
                     }
                 }
             }
@@ -109,7 +110,7 @@ namespace ErickRun
             string dayComplete;
             string year;
 
-            Console.WriteLine("While test");
+            Printer.Print("While test");
 
             int x = 0;
             //for (int x = 0; x <= 365; x = x + 1)
@@ -123,7 +124,7 @@ namespace ErickRun
 
                 if ((dayComplete == "Saturday" || dayComplete == "Sunday") && year == "2021")
                 {
-                    Console.WriteLine(todaysDate.ToString("yyyy,MMMM,dd, dddd"));
+                    Printer.Print(todaysDate.ToString("yyyy,MMMM,dd, dddd"));
                 }
                 x++;
             }

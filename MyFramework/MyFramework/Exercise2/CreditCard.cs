@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyFramework.Exercise3_Karen;
+using System;
 namespace Inheritance.Exercise2
 {
     public class CreditCard : Card
@@ -14,8 +15,8 @@ namespace Inheritance.Exercise2
 
         public override void PrintCardDetails()
         {
-            Console.WriteLine("");
-            Console.WriteLine("Printing 'CreditCard' details below...");
+            Printer.Print("");
+            Printer.Print("Printing 'CreditCard' details below...");
 
             //ToDo pending implementation
         }

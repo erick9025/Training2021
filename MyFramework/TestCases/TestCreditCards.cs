@@ -1,5 +1,6 @@
 ﻿using Inheritance.Exercise2;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MyFramework.Exercise3_Karen;
 using System;
 
 namespace ErickRun
@@ -35,7 +36,7 @@ namespace ErickRun
             card2.PrintCardDetails();
 
             AxosCreditCard card3 = new AxosCreditCard("Karen González", "4792012304560010", 999999, CardNetworks.Visa);
-            Console.WriteLine("How many cards created so far: " + AxosCreditCard.cardCounter);
+            Printer.Print("How many cards created so far: " + AxosCreditCard.cardCounter);
 
             card3.BuySomething(1, "MSFT134", "Microsoft Verification");
             card3.PrintCardDetails();

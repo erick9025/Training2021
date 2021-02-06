@@ -1,11 +1,12 @@
-﻿using System;
+﻿using MyFramework.Exercise3_Karen;
+using System;
 namespace Inheritance.Exercise2
 {
     public class DebitCard : Card
     {
         public override void PrintCardDetails()
         {
-            Console.WriteLine("Printing 'DebitCard' details below...");
+            Printer.Print("Printing 'DebitCard' details below...");
         }
     }
 }

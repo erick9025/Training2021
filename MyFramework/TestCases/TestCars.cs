@@ -44,7 +44,8 @@ namespace ErickRun
 
             car3
                 .Reverse(3)
-                .Reverse(6);
+                .Reverse(6)
+                .Reverse(4);
 
             car1.PrintCarDetails();
             car2.PrintCarDetails();

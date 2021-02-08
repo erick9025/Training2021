@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MyFramework.ReusableMethods;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,20 @@ namespace ErickRun
     [TestClass]
     public class UnitTest1
     {
+        [TestMethod]
+        public void Febrero5Viernes()
+        {
+            ReusableMethods myObject = new ReusableMethods();
+
+            //Do the same call N amount of times, each time with a different number (input parameter)
+            myObject.IsNumberWithinRange(4, 1, 10);
+            myObject.IsNumberWithinRange(7, 1, 100);
+            myObject.IsNumberWithinRange(5);
+            myObject.IsNumberWithinRange(15);
+            myObject.IsNumberWithinRange(40, 40, 50);
+            myObject.IsNumberWithinRange(-154, -1000);
+        }
+
         [TestMethod]
         public void TestMethod1()
         {

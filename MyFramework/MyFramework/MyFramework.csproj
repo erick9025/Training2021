@@ -58,8 +58,16 @@
     <Compile Include="Exercise2\CreditCard.cs" />
     <Compile Include="Exercise2\DebitCard.cs" />
     <Compile Include="Exercise2\ICard.cs" />
+    <Compile Include="Exercise3\AirplaneInfo.cs" />
+    <Compile Include="Exercise3\Countries.cs" />
+    <Compile Include="Exercise3\Customer.cs" />
+    <Compile Include="Exercise3\Flight.cs" />
+    <Compile Include="Exercise3\Person.cs" />
+    <Compile Include="Exercise3\TestUtilities.cs" />
     <Compile Include="Palindrome\SampleMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReusableMethods\Car.cs" />
+    <Compile Include="ReusableMethods\ReusableMethods.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
